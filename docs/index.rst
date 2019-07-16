@@ -1,26 +1,57 @@
-=================
-snapcraft-jsonnet
-=================
+==========
+sc-jsonnet
+==========
 
-This is the documentation of **snapcraft-jsonnet**.
+This is the documentation of **sc-jsonnet**.
 
-.. note::
+Howto
+=====
 
-    This is the main page of your project's `Sphinx`_ documentation.
-    It is formatted in `reStructuredText`_. Add additional pages
-    by creating rst-files in ``docs`` and adding them to the `toctree`_ below.
-    Use then `references`_ in order to link them from this page, e.g.
-    :ref:`authors` and :ref:`changes`.
+First you need to get **sc-jsonnet** from the snap store:
 
-    It is also possible to refer to the documentation of other Python packages
-    with the `Python domain syntax`_. By default you can reference the
-    documentation of `Sphinx`_, `Python`_, `NumPy`_, `SciPy`_, `matplotlib`_,
-    `Pandas`_, `Scikit-Learn`_. You can add more by extending the
-    ``intersphinx_mapping`` in your Sphinx's ``conf.py``.
+.. code-block:: bash
 
-    The pretty useful extension `autodoc`_ is activated by default and lets
-    you include documentation from docstrings. Docstrings can be written in
-    `Google style`_ (recommended!), `NumPy style`_ and `classical style`_.
+    sudo snap install sc-jsonnet
+
+Now you have the program you need to make a file called
+`snapcraft.jsonnet` in your snapcraft project at
+`./snap/local/snapcraft.jsonnet`. Add the following to begin with:
+
+.. code-block::
+    :caption: snap/local/snapcraft.jsonnet
+
+    local snapcraft = import 'snapcraft.libsonnet';
+
+    snapcraft {
+        name: "my-jsonnet-snap-name",
+        version: "0.1",
+        summary: "Single-line elevator pitch for your amazing snap",
+        description: "This is my-snap's description. You have a paragraph or two to tell the most important story about your snap. Keep it under 100 words though, we live in tweetspace and your description wants to look good in the snap store.",
+        grade: "devel",
+        confinement: "devmode",
+
+        parts: {
+            "my-part": {
+                plugin: "nil",
+            },
+        },
+    }
+
+Finally we need to run the translation step to convert the jsonnet
+into yaml for `snapcraft` to use. First, we run `sc-jsonnet`
+without any parameters to see the yaml that will be produced:
+
+.. code-block:: bash
+
+    sc-jsonnet
+
+Now we have verified that everything works, we can run with
+`-o snap/snapcraft.yaml` to save into your project `snapcraft.yaml`
+for the snapcraft tool to use:
+
+.. code-block:: bash
+
+    sc-jsonnet -o snap/snapcraft.yaml
 
 
 Contents

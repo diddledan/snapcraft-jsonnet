@@ -10,7 +10,7 @@ For information about jsonnet see https://jsonnet.org/",
     confinement: "strict",
 
     parts: {
-        "snapcraft-jsonnet": {
+        "sc-jsonnet": {
             plugin: "python",
             source: ".",
             "python-version": "python3",
@@ -19,8 +19,8 @@ For information about jsonnet see https://jsonnet.org/",
     },
 
     apps: {
-        "snapcraft-jsonnet": {
-            command: "bin/snapcraft-jsonnet",
+        "sc-jsonnet": {
+            command: "bin/sc-jsonnet",
             plugs: [
                 "home",
                 "network",

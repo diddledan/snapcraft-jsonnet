@@ -1,6 +1,6 @@
 apps:
-  snapcraft-jsonnet:
-    command: bin/snapcraft-jsonnet
+  sc-jsonnet:
+    command: bin/sc-jsonnet
     plugs:
     - home
     - network
@@ -13,7 +13,7 @@ description: 'Use jsonnet syntax to build your snapcraft.yaml.
 grade: stable
 name: sc-jsonnet
 parts:
-  snapcraft-jsonnet:
+  sc-jsonnet:
     build-packages:
     - git
     plugin: python
