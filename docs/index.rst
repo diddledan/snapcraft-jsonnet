@@ -15,10 +15,7 @@ First you need to get **sc-jsonnet** from the snap store:
 
 Now you have the program you need to make a file called
 `snapcraft.jsonnet` in your snapcraft project at
-`./snap/local/snapcraft.jsonnet`. Add the following to begin with:
-
-.. code-block::
-    :caption: snap/local/snapcraft.jsonnet
+`./snap/local/snapcraft.jsonnet`. Add the following to begin with::
 
     local snapcraft = import 'snapcraft.libsonnet';
 
