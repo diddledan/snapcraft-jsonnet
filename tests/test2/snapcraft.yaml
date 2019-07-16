@@ -1,0 +1,23 @@
+apps: {}
+base: core18
+description: testing
+name: test
+parts:
+  alsa-mixin:
+    build-packages:
+    - libasound2-dev
+    override-build: install -m644 -D -t $SNAPCRAFT_PART_INSTALL/etc asound.conf
+    override-pull: "\ncat > asound.conf <<EOF\npcm.!default {\n  type pulse\n  fallback\
+      \ \"sysdefault\"\n  hint {\n    show on\n    description \"Default ALSA Output\
+      \ (currently PulseAudio Sound Server)\"\n  }\n}\nctl.!default {\n  type pulse\n\
+      \  fallback \"sysdefault\"\n}\nEOF\n                "
+    plugin: nil
+    source: https://github.com/diddledan/snapcraft-alsa.git
+    stage-packages:
+    - libasound2
+    - libasound2-plugins
+plugs: {}
+slots: {}
+summary: test
+version: '0.1'
+
