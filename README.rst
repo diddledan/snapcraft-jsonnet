@@ -1,6 +1,6 @@
-=================
-snapcraft-jsonnet
-=================
+==========
+sc-jsonnet
+==========
 
 
 Build your snapcraft.yaml with jsonnet!
