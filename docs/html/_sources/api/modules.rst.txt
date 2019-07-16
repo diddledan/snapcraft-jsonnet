@@ -1,0 +1,7 @@
+snapcraft_jsonnet
+=================
+
+.. toctree::
+   :maxdepth: 4
+
+   snapcraft_jsonnet

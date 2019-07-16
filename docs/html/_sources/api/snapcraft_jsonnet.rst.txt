@@ -1,0 +1,22 @@
+snapcraft\_jsonnet package
+==========================
+
+Submodules
+----------
+
+snapcraft\_jsonnet.cli module
+-----------------------------
+
+.. automodule:: snapcraft_jsonnet.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: snapcraft_jsonnet
+   :members:
+   :undoc-members:
+   :show-inheritance:
