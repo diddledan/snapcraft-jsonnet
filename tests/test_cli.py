@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import pytest
+import json
+import yaml
 import os
-from snapcraft_jsonnet.skeleton import find_snapcraft_file, parse_snapcraft_file
+from sc_jsonnet.cli import find_snapcraft_file, parse_snapcraft_file
 
 __author__ = "Daniel Llewellyn"
 __copyright__ = "Daniel Llewellyn"
@@ -24,6 +26,7 @@ def test_find_snapcraft():
         os.path.dirname(__file__),
         "test1",
         "snap",
+        "local",
         "snapcraft.jsonnet"
     )
 
@@ -38,6 +41,9 @@ def test_find_snapcraft():
 
 
 def test_parse_snapcraft():
+    def jsonstr(v):
+        return json.dumps(v, sort_keys=True, indent=4, separators=(',', ': '))
+
     yaml_file = os.path.join(
         os.path.dirname(__file__),
         "test1",
@@ -45,7 +51,12 @@ def test_parse_snapcraft():
         "snapcraft.yaml"
     )
     with open(yaml_file, "r") as f:
-        assert parse_snapcraft_file(find_snapcraft_file(os.path.join(
-            os.path.dirname(__file__),
-            "test1"
-        ))) == f.read()
+        yaml_doc = yaml.load(f, Loader=yaml.FullLoader)
+    
+        jsonnet_doc = json.loads(parse_snapcraft_file(
+            find_snapcraft_file(os.path.join(
+                os.path.dirname(__file__),
+                "test1"
+            ))))
+
+        assert jsonstr(yaml_doc) == jsonstr(jsonnet_doc)

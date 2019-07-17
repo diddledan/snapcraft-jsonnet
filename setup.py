@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    Setup file for snapcraft_jsonnet.
+    Setup file for sc_jsonnet.
     Use setup.cfg to configure your project.
 
     This file was generated with PyScaffold 3.2.1.

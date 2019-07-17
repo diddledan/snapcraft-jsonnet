@@ -14,7 +14,7 @@ import yaml
 
 import _jsonnet
 
-from snapcraft_jsonnet import __version__
+from sc_jsonnet import __version__
 
 __author__ = "Daniel Llewellyn"
 __copyright__ = "Daniel Llewellyn"
@@ -37,7 +37,7 @@ def parse_args(args):
     parser.add_argument(
         "--version",
         action="version",
-        version="snapcraft-jsonnet {ver}".format(ver=__version__))
+        version="sc-jsonnet {ver}".format(ver=__version__))
     parser.add_argument(
         "-o",
         "--output-file",
@@ -171,7 +171,7 @@ def main(args):
     except FileNotFoundError as e:
         print(e)
         print(
-            "\nMake sure you are executing snapcraft-jsonnet within your"
+            "\nMake sure you are executing sc-jsonnet within your"
             " project folder.\n\nYour 'snapcraft.jsonnet' file should be"
             " located at:\n\n\t./snap/snapcraft.jsonnet\n"
         )

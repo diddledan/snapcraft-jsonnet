@@ -1,7 +1,7 @@
 # .coveragerc to control coverage.py
 [run]
 branch = True
-source = snapcraft_jsonnet
+source = sc_jsonnet
 # omit = bad_file.py
 
 [paths]

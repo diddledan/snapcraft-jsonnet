@@ -8,8 +8,8 @@ PAPER         =
 BUILDDIR      = ../build/sphinx
 AUTODOCDIR    = api
 AUTODOCBUILD  = sphinx-apidoc
-PROJECT       = snapcraft-jsonnet
-MODULEDIR     = ../src/snapcraft_jsonnet
+PROJECT       = sc-jsonnet
+MODULEDIR     = ../src/sc_jsonnet
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $?), 1)
