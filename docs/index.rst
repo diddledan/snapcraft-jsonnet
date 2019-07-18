@@ -8,6 +8,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   Available Libraries <available-libraries>
    License <license>
    Authors <authors>
    Changelog <changelog>
