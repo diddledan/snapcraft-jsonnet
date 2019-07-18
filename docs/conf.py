@@ -142,7 +142,12 @@ html_theme = 'alabaster'
 # documentation.
 html_theme_options = {
     'sidebar_width': '300px',
-    'page_width': '1200px'
+    'page_width': '1200px',
+    'github_user': 'diddlesnaps',
+    'github_repo': 'snapcraft-jsonnet',
+    'github_button': 'false',
+    'github_banner': 'true',
+    'description': 'Build your snapcraft.yaml with jsonnet!',
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -183,7 +188,7 @@ html_static_path = ['_static']
 # html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-# html_sidebars = {}
+html_sidebars = { '**': ['about.html', 'snapstore.html', 'navigation.html', 'searchbox.html'] }
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
