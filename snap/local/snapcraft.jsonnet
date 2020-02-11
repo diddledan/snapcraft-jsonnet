@@ -2,7 +2,7 @@ local snapcraft = import 'snapcraft.libsonnet';
 
 snapcraft {
     name: "sc-jsonnet",
-    version: "0.1",
+    version: "0.2",
     summary: "Build your snapcraft.yaml with jsonnet!",
     description: "Use jsonnet syntax to build your snapcraft.yaml.
 For information about jsonnet see https://jsonnet.org/",
