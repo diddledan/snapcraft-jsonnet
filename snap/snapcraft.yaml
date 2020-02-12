@@ -24,4 +24,4 @@ parts:
     python-version: python3
     source: .
 summary: Build your snapcraft.yaml with jsonnet!
-version: '0.1'
+version: '0.2'

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import pytest
 import json
 import yaml
 import os
@@ -10,13 +9,6 @@ __author__ = "Daniel Llewellyn"
 __copyright__ = "Daniel Llewellyn"
 __license__ = "mit"
 
-
-#def test_fib():
-#    assert fib(1) == 1
-#    assert fib(2) == 1
-#    assert fib(7) == 13
-#    with pytest.raises(AssertionError):
-#        fib(-10)
 
 def test_find_snapcraft():
     assert find_snapcraft_file(os.path.join(
@@ -52,7 +44,7 @@ def test_parse_snapcraft():
     )
     with open(yaml_file, "r") as f:
         yaml_doc = yaml.load(f, Loader=yaml.FullLoader)
-    
+
         jsonnet_doc = json.loads(parse_snapcraft_file(
             find_snapcraft_file(os.path.join(
                 os.path.dirname(__file__),

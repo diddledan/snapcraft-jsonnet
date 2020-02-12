@@ -1,23 +1,7 @@
-apps: {}
-base: core18
-description: testing
-name: test
-parts:
-  alsa-mixin:
-    build-packages:
-    - libasound2-dev
-    override-build: install -m644 -D -t $SNAPCRAFT_PART_INSTALL/etc asound.conf
-    override-pull: "\ncat > asound.conf <<EOF\npcm.!default {\n  type pulse\n  fallback\
-      \ \"sysdefault\"\n  hint {\n    show on\n    description \"Default ALSA Output\
-      \ (currently PulseAudio Sound Server)\"\n  }\n}\nctl.!default {\n  type pulse\n\
-      \  fallback \"sysdefault\"\n}\nEOF\n                "
-    plugin: nil
-    source: https://github.com/diddledan/snapcraft-alsa.git
-    stage-packages:
-    - libasound2
-    - libasound2-plugins
-plugs: {}
-slots: {}
-summary: test
-version: '0.1'
-
+name: "my-snap-name"
+version: "0.1"
+summary: "Single-line elevator pitch for your amazing snap"
+description: "This is my-snap's description. You have a paragraph or two to tell the\nmost important story about your snap. Keep it under 100 words though,\nwe live in tweetspace and your description wants to look good in the snap\nstore."
+base: "core18"
+confinement: "devmode"
+grade: "devel"
