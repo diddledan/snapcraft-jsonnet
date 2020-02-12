@@ -11,5 +11,7 @@ featured here, please either `open an issue
 `fork the repository and create a pull-request
 <https://github.com/diddlesnaps/snapcraft-jsonnet>`_.
 
+- `snapcraft-utils-library <https://snapcraft-utils-library.readthedocs.io/>`_
+  Miscellaneous utilities for Snap packagers.
 - `snapcraft-alsa-lib <https://snapcraft-alsa.readthedocs.io/>`_
   ALSA for your snap package routing sound through Pulseaudio.
