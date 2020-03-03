@@ -2,6 +2,11 @@
 Changelog
 =========
 
+Version 0.3
+===========
+
+- Drop ``version`` field from default values
+
 Version 0.2
 ===========
 

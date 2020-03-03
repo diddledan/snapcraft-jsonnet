@@ -13,7 +13,9 @@ base: core18
 confinement: strict
 description: 'Use jsonnet syntax to build your snapcraft.yaml.
 
-  For information about jsonnet see https://jsonnet.org/'
+  For information about jsonnet see https://jsonnet.org/
+
+  '
 grade: stable
 name: sc-jsonnet
 parts:
@@ -24,4 +26,4 @@ parts:
     python-version: python3
     source: .
 summary: Build your snapcraft.yaml with jsonnet!
-version: '0.2'
+version: '0.3'
