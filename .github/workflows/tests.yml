@@ -17,8 +17,8 @@ jobs:
         python-version: ${{ matrix.python }}
     - name: Install dependencies
       run: |
-        apt-get update
-        apt-get install -y libyaml-dev
+        sudo apt-get update
+        sudo apt-get install -y libyaml-dev
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Lint with flake8
