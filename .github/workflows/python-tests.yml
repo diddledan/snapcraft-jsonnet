@@ -1,4 +1,4 @@
-name: Tests
+name: Python Tests
 
 on: [push, pull_request]
 
@@ -31,13 +31,3 @@ jobs:
     - name: Test with pytest
       run: |
         python setup.py test
-  
-  snapcraft-build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: jhenstridge/snapcraft-build-action@v1
-      id: build
-    - uses: diddlesnaps/snapcraft-review-tools-action@v1
-      with:
-        snap: ${{ steps.build.outputs.snap }}
