@@ -16,8 +16,8 @@ import _jsonnet
 
 from sc_jsonnet import __version__
 
-__author__ = "Daniel Llewellyn"
-__copyright__ = "Daniel Llewellyn"
+__author__ = "Dani Llewellyn"
+__copyright__ = "Dani Llewellyn"
 __license__ = "mit"
 
 _logger = logging.getLogger(__name__)
